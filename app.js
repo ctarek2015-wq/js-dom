@@ -13,6 +13,7 @@ const bodyElement = document.querySelector("body");
 const h2Element = document.createElement("h2");
 const commentElements = document.querySelectorAll("li");
 const btnEle = document.querySelector("button");
+// const btn2 = document.querySelector("button");
 
 // Modify
 
@@ -37,9 +38,20 @@ commentElements.forEach((list, idx) => {
 });
 
 if (btnEle.hasAttribute("disabled") === true) {
-  btnEle.removeAttribute("disabled");
+  //   btnEle.removeAttribute("disabled");
+  btnEle.setAttribute("class", "me-btn");
 }
+btnEle.classList.add("1", "2", "3");
+btnEle.classList.remove("2", "1");
 
+// btn2.textContent = "Click me, Not Him";
+// // bodyElement.appendChild(btn2);
+
+if (btnEle.hasAttribute("disabled")) {
+  btnEle.textContent = "Don't Click Me";
+} else {
+  btnEle.textContent = "I said Don't";
+}
 // LOGS
 console.dir(titleElement);
 console.dir(paragraphElement);
